@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creative Coding with P5.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+    <script>
+        function setup() {
+            createCanvas(800, 600);
+            background(0);
+        }
+
+        function draw() {
+            let colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#00FFFF', '#FF00FF'];
+            fill(random(colors));
+            noStroke();
+            let shape = int(random(2));
+            if (shape == 0) {
+                ellipse(random(width), random(height), random(10, 100), random(10, 100));
+            } else {
+                rect(random(width), random(height), random(50, 200), random(50, 200));
+            }
+        }
+    </script>
+</body>
+</html>
